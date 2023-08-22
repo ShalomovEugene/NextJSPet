@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Formik, Field, Form, FormikHelpers } from "formik";
 import { IFormProps, IValues } from "./Form.props";
+import { FormSchema, initialValues } from "./form-config";
 import {
   FromWrapp,
   FieldGroup,
@@ -8,36 +9,16 @@ import {
   CheckboxGroup,
   MessageGroup,
 } from "./Form.styles";
-import * as Yup from "yup";
+
 import { Label } from "../Label/Label";
 import { Button } from "../Button/Button";
 import { Heading } from "../Heading/Heading";
-
-const phoneRegExp =
-  /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
-const emailRegExp = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
-
-const FormSchema = Yup.object().shape({
-  firstName: Yup.string().required("The field is required"),
-  email: Yup.string()
-    .email("Invalid email")
-    .required("The field is required")
-    .matches(emailRegExp, "Email is not valid"),
-  phoneNumber: Yup.string().matches(phoneRegExp, "Phone number is not valid"),
-});
 
 const From = ({}: IFormProps) => {
   return (
     <FromWrapp>
       <Formik
-        initialValues={{
-          firstName: "",
-          lastName: "",
-          email: "",
-          phoneNumber: "",
-          checked: [""],
-          message: "",
-        }}
+        initialValues={initialValues}
         onSubmit={(
           values: IValues,
           { setSubmitting, resetForm }: FormikHelpers<IValues>
