@@ -45,6 +45,8 @@ export const MobileMenuWrapp = styled.nav((props) => {
         }
         .arrow-up {
           transform: rotate(180deg);
+          right: 7.5px;
+          top: 9px;
         }
 
         a {

@@ -1,9 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-	pageExtensions: ['tsx', 'jsx'],
-	  compiler: {
-    	styledComponents: true,
-  	}
-}
+  pageExtensions: ["tsx", "jsx", "js"],
+  compiler: {
+    styledComponents: true,
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

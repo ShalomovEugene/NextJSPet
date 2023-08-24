@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from "react";
+import { FC, useEffect, useState, useCallback } from "react";
 import { usePathname } from "next/navigation";
 import { NavbarWrapp } from "./Navbar.styles";
 import Link from "next/link";
@@ -15,9 +15,9 @@ const Navbar: FC = (): JSX.Element => {
   const pathname = usePathname();
 
   const [isOpenMobileMenu, setIsOpenMobileMenu] = useState<boolean>(false);
-  const handleMobileMenu = () => {
+  const handleMobileMenu = useCallback(() => {
     setIsOpenMobileMenu(!isOpenMobileMenu);
-  };
+  }, [isOpenMobileMenu]);
 
   useEffect(() => {
     handleMobileMenu;
@@ -31,7 +31,7 @@ const Navbar: FC = (): JSX.Element => {
     return () => {
       handleMobileMenu;
     };
-  }, [isOpenMobileMenu]);
+  }, [isOpenMobileMenu, handleMobileMenu]);
 
   useEffect(() => {
     return () => {

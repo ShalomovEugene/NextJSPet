@@ -1,3 +1,4 @@
+/* eslint-disable react/no-children-prop */
 import "bootstrap/dist/css/bootstrap-grid.min.css";
 import "bootstrap/dist/css/bootstrap-utilities.min.css";
 import type { Metadata } from "next";

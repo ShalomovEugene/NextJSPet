@@ -17,10 +17,6 @@
     ]
   },
   "extends": [
-    "next/core-web-vitals",
-    "eslint:recomended",
-    "plugin:@typescript-eslint/eslint-recomended",
-    "plugin:@typescript-eslint/recomended",
-    "plugin:react-hooks/recommended"
+    "next/core-web-vitals"
   ]
 }
