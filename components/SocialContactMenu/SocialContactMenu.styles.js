@@ -46,21 +46,21 @@ export const SocialIcon = styled.div(() => {
     }
     &.twitter {
       &:after {
-        background-image: url(${Instagram.src});
-      }
-      &:hover {
-        &:after {
-          background-image: url(${InstagramHover.src});
-        }
-      }
-    }
-    &.instagram {
-      &:after {
         background-image: url(${Twitter.src});
       }
       &:hover {
         &:after {
           background-image: url(${TwitterHover.src});
+        }
+      }
+    }
+    &.instagram {
+      &:after {
+        background-image: url(${Instagram.src});
+      }
+      &:hover {
+        &:after {
+          background-image: url(${InstagramHover.src});
         }
       }
     }
