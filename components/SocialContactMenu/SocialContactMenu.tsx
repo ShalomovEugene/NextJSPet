@@ -8,13 +8,13 @@ const SocialContactMenu: FC = () => {
     <SocialMenuWrapp>
       <Ul>
         <li>
-          <Link href="https://twitter.com/" target="_blank">
-            <SocialIcon className="twitter" />
+          <Link href="https://www.instagram.com/" target="_blank">
+            <SocialIcon className="instagram" />
           </Link>
         </li>
         <li>
-          <Link href="https://www.instagram.com/" target="_blank">
-            <SocialIcon className="instagram" />
+          <Link href="https://twitter.com/" target="_blank">
+            <SocialIcon className="twitter" />
           </Link>
         </li>
         <li>
